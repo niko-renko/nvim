@@ -21,6 +21,11 @@ return {
 	},
 
 	{
+		"nvim-treesitter/nvim-treesitter",
+		lazy = false
+	},
+
+	{
 		"kdheepak/lazygit.nvim",
 		keys = {
 			{ "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
