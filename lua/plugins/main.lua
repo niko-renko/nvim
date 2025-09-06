@@ -1,5 +1,15 @@
 return {
 	{
+		"navarasu/onedark.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("onedark").setup({ style = "dark" })
+			require("onedark").load()
+		end,
+	},
+
+	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
 		lazy = false,
@@ -12,17 +22,24 @@ return {
 	},
 
 	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function()
+			require("nvim-treesitter.configs").setup({
+				auto_install = true,
+				highlight = { enable = true },
+				indent = { enable = false }, -- rely on LSP
+			})
+		end,
+	},
+
+	{
 		"mason-org/mason-lspconfig.nvim",
 		opts = {},
 		dependencies = {
 			{ "mason-org/mason.nvim", opts = {} },
 			"neovim/nvim-lspconfig",
 		},
-	},
-
-	{
-		"nvim-treesitter/nvim-treesitter",
-		lazy = false
 	},
 
 	{
