@@ -1,5 +1,7 @@
 vim.g.mapleader = " "
+
 vim.opt.termguicolors = true
+vim.opt.number = true
 
 vim.api.nvim_create_autocmd("BufWritePre", {
 	callback = function()
