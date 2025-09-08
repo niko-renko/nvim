@@ -10,6 +10,6 @@ vim.diagnostic.config({
 	update_in_insert = false,
 })
 
+require("config.lazy")
 require("keymap")
 require("autocmds")
-require("config.lazy")
