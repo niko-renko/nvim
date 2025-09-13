@@ -8,11 +8,13 @@ vim.opt.expandtab = true
 vim.opt.softtabstop = 4
 
 vim.diagnostic.config({
-	virtual_text = true,
-	signs = true,
-	underline = true,
-	update_in_insert = false,
+    virtual_text = true,
+    signs = true,
+    underline = true,
+    update_in_insert = false,
 })
+
+vim.lsp.set_log_level("debug")
 
 require("config.lazy")
 require("keymap")
