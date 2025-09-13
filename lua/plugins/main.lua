@@ -11,9 +11,7 @@ return {
 
     {
         "nvim-tree/nvim-tree.lua",
-        dependencies = {
-            "nvim-tree/nvim-web-devicons",
-        },
+        dependencies = { "nvim-tree/nvim-web-devicons" },
         lazy = false,
         version = "*",
         opts = {
@@ -37,12 +35,8 @@ return {
     },
 
     {
-        "mason-org/mason-lspconfig.nvim",
-        dependencies = {
-            { "mason-org/mason.nvim", opts = {} },
-            "neovim/nvim-lspconfig",
-        },
-        opts = {},
+        "mason-org/mason.nvim",
+        opts = {}
     },
 
     {
