@@ -14,9 +14,12 @@ vim.diagnostic.config({
     update_in_insert = false,
 })
 
+vim.lsp.set_log_level("debug")
 
-require("config.lazy")
+require("lazy_init")
 require("keymap")
 require("autocmds")
 require("commands")
-require("lsp")
+
+require("servers/luals")
+require("servers/jdtls")
