@@ -70,7 +70,11 @@ local spec = {
 
     {
         "j-hui/fidget.nvim",
-        opts = {}
+        opts = {
+            notification = {
+                override_vim_notify = true,
+            }
+        }
     }
 }
 require("lazy").setup({ spec = spec })
