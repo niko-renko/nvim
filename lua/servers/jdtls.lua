@@ -13,21 +13,20 @@ local open_classfile = function(uri)
     local client = vim.tbl_filter(function(c)
         return c.name == "jdtls"
     end, vim.lsp.get_clients())[1]
-    local function handler(err, content)
+    local handler = function(err, content)
         assert(not err, vim.inspect(err))
         assert(content, "jdtls client must return result for java/classFileContents")
         local normalized = string.gsub(content, "\r\n", "\n")
         local source_lines = vim.split(normalized, "\n", { plain = true })
-        -- vim.bo[bufnr].modifiable = false
         vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, source_lines)
         vim.api.nvim_buf_set_option(bufnr, "modifiable", false)
+        vim.lsp.buf_attach_client(bufnr, client.id)
         done = true
     end
 
     client:request("java/classFileContents", params, handler, bufnr)
     vim.wait(1000, function() return done == true end)
 end
-
 
 vim.api.nvim_create_autocmd("BufReadCmd", {
     group = group,
