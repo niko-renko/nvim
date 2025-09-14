@@ -66,6 +66,11 @@ local spec = {
         "ibhagwan/fzf-lua",
         dependencies = { "nvim-tree/nvim-web-devicons" },
         opts = {}
+    },
+
+    {
+        "j-hui/fidget.nvim",
+        opts = {}
     }
 }
 require("lazy").setup({ spec = spec })
