@@ -21,5 +21,6 @@ require("keymap")
 require("autocmds")
 require("commands")
 
+require("servers/efm")
 require("servers/luals")
 require("servers/jdtls")
