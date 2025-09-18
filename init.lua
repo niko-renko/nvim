@@ -22,6 +22,7 @@ require("keymap")
 require("autocmds")
 require("commands")
 require("local")
+require("search")
 
 require("servers/efm")
 require("servers/luals")
