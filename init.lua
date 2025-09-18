@@ -15,14 +15,12 @@ vim.diagnostic.config({
     update_in_insert = false,
 })
 
-vim.lsp.set_log_level("debug")
-
 require("lazy_init")
+
 require("keymap")
 require("autocmds")
 require("commands")
 require("local")
-require("search")
 
 require("servers/efm")
 require("servers/luals")
