@@ -2,6 +2,9 @@ vim.g.mapleader = " "
 
 vim.opt.termguicolors = true
 vim.opt.number = true
+vim.opt.laststatus = 3
+vim.opt.showmode = false
+vim.opt.cmdheight = 0
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
@@ -15,9 +18,8 @@ vim.diagnostic.config({
     update_in_insert = false,
 })
 
-vim.lsp.set_log_level("debug")
-
 require("lazy_init")
+
 require("keymap")
 require("autocmds")
 require("commands")
