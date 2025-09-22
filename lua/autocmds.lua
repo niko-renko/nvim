@@ -14,3 +14,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
         client.server_capabilities.semanticTokensProvider = nil -- Rely on TreeSitter
     end,
 })
+
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+    pattern = "NvimTree*",
+    callback = function()
+        local api = require("nvim-tree.api")
+
+        if not api.tree.is_visible() then
+            api.tree.open()
+        end
+    end,
+})

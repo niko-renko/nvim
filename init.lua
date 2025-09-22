@@ -5,6 +5,7 @@ vim.opt.number = true
 vim.opt.laststatus = 3
 vim.opt.showmode = false
 vim.opt.cmdheight = 0
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
