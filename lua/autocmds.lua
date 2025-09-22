@@ -1,3 +1,4 @@
+local local_file = require('local_file')
 local group = vim.api.nvim_create_augroup("global", {})
 
 vim.api.nvim_create_autocmd("BufWritePre", {
@@ -15,13 +16,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end,
 })
 
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
-    pattern = "NvimTree*",
+vim.api.nvim_create_autocmd("DirChanged", {
     callback = function()
-        local api = require("nvim-tree.api")
-
-        if not api.tree.is_visible() then
-            api.tree.open()
-        end
+        local_file.load()
     end,
 })

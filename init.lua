@@ -24,7 +24,6 @@ require("lazy_init")
 require("keymap")
 require("autocmds")
 require("commands")
-require("local")
 
 require("servers/efm")
 require("servers/luals")
