@@ -1,8 +1,17 @@
 return {
     "cameronr/auto-session",
+    branch = "fix/file-tree-compatibility",
     lazy = false,
     opts = {
-        close_filetypes_on_save = { "NvimTree" }
+        pre_restore_cmds = {
+            function()
+                require("nvim-tree.api").tree.close()
+            end
+        },
+        post_restore_cmds = {
+            function()
+                require("nvim-tree.api").tree.open()
+            end
+        },
     },
-    branch = "fix/file-tree-compatibility"
 }
