@@ -21,3 +21,9 @@ vim.api.nvim_create_autocmd("DirChanged", {
         local_file.load()
     end,
 })
+
+vim.api.nvim_create_autocmd("VimEnter", {
+    callback = function()
+        local_file.load()
+    end,
+})
