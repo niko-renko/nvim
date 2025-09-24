@@ -1,6 +1,5 @@
 return {
-    "cameronr/auto-session",
-    branch = "fix/file-tree-compatibility",
+    "rmagatti/auto-session",
     lazy = false,
     opts = {
         pre_restore_cmds = {
