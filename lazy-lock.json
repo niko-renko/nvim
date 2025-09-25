@@ -1,7 +1,8 @@
 {
-  "auto-session": { "branch": "main", "commit": "fef6a233884f387e5fd0506bd239f4e27b82714b" },
+  "auto-session": { "branch": "main", "commit": "af683b2cb176aa8e0cddb3cdc2dada21f09bb09b" },
   "fidget.nvim": { "branch": "main", "commit": "3f5475949679953af6d78654db29b944fa826e6a" },
   "fzf-lua": { "branch": "main", "commit": "2388dcd61731ae158bf7dad2ae0419291837e557" },
+  "gitsigns.nvim": { "branch": "main", "commit": "f780609807eca1f783a36a8a31c30a48fbe150c5" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lazygit.nvim": { "branch": "main", "commit": "2305deed25bc61b866d5d39189e9105a45cf1cfb" },
   "lualine.nvim": { "branch": "master", "commit": "b8c23159c0161f4b89196f74ee3a6d02cdc3a955" },
