@@ -17,12 +17,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 vim.api.nvim_create_autocmd("DirChanged", {
+    group = group,
     callback = function()
         local_file.load()
     end,
 })
 
 vim.api.nvim_create_autocmd("VimEnter", {
+    group = group,
     callback = function()
         local_file.load()
     end,
