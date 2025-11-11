@@ -1,4 +1,4 @@
-local local_file = require('local_file')
+local local_file = require("local_file")
 local group = vim.api.nvim_create_augroup("global", {})
 
 vim.api.nvim_create_autocmd("BufWritePre", {
@@ -27,5 +27,8 @@ vim.api.nvim_create_autocmd("VimEnter", {
     group = group,
     callback = function()
         local_file.load()
+        for name, _ in pairs(vim.lsp.config._configs) do
+            vim.lsp.enable(name)
+        end
     end,
 })

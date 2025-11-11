@@ -4,6 +4,7 @@ return {
     lazy = false,
     version = "*",
     opts = {
+        hijack_netrw = false,
         filters = {
             dotfiles = false,
             git_ignored = false

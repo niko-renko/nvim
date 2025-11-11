@@ -1,16 +1,15 @@
-vim.g.mapleader = " "
+vim.g.mapleader        = " "
 
-vim.opt.termguicolors = true
-vim.opt.number = true
-vim.opt.laststatus = 3
-vim.opt.showmode = false
-vim.opt.cmdheight = 0
-vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+vim.opt.termguicolors  = true
+vim.opt.number         = true
+vim.opt.showmode       = false
+vim.opt.cmdheight      = 1
+vim.opt.sessionoptions = ""
 
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.softtabstop = 4
+vim.opt.tabstop        = 4
+vim.opt.shiftwidth     = 4
+vim.opt.expandtab      = true
+vim.opt.softtabstop    = 4
 
 vim.diagnostic.config({
     virtual_text = true,

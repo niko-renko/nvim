@@ -9,7 +9,8 @@ local checkstyle = {
     lintStdin = false,
     lintIgnoreExitCode = true
 }
-vim.lsp.config("efm", {
+
+vim.lsp.config["efm"] = {
     cmd = { "efm-langserver" },
     filetypes = { "java" },
     root_markers = { ".git" },
@@ -19,5 +20,4 @@ vim.lsp.config("efm", {
             java = { checkstyle }
         }
     }
-})
-vim.lsp.enable("efm")
+}

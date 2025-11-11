@@ -12,4 +12,3 @@ vim.lsp.config["luals"] = {
         ".git"
     },
 }
-vim.lsp.enable("luals")
