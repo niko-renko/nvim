@@ -3,6 +3,9 @@ local trust_file = vim.fn.stdpath("data") .. "/trusted"
 
 local M = {}
 
+local f = io.open(trust_file, "a")
+if f then f:close() end
+
 local trusted = {}
 for line in io.lines(trust_file) do
     trusted[line] = true
