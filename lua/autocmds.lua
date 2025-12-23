@@ -1,6 +1,11 @@
 local local_file = require("local_file")
 local group = vim.api.nvim_create_augroup("global", {})
 
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+    group = group,
+    command = "if mode() != 'c' | checktime | endif",
+})
+
 vim.api.nvim_create_autocmd("BufWritePre", {
     group = group,
     callback = function()

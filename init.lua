@@ -1,5 +1,7 @@
 vim.g.mapleader       = " "
 
+vim.opt.autoread      = true
+vim.opt.updatetime    = 250
 vim.opt.termguicolors = true
 vim.opt.number        = true
 vim.opt.showmode      = false
