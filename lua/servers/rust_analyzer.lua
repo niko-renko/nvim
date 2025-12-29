@@ -7,4 +7,9 @@ vim.lsp.config["rust_analyzer"] = {
         "rust-project.json",
         ".git",
     },
+    init_options = {
+        cargo = {
+            features = "all",
+        },
+    },
 }
