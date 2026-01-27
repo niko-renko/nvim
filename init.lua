@@ -21,15 +21,16 @@ vim.diagnostic.config({
 
 require("lazy_init")
 
+require("servers/efm")
+require("servers/luals")
+require("servers/jdtls")
+require("servers/clangd")
+require("servers/rust_analyzer")
+require("servers/roslyn_ls")
+
 require("features/lsp")
 require("features/diagnostics")
 require("features/search")
 require("features/file_watcher")
 require("features/local_config")
 require("features/jdtls_classfile")
-
-require("servers/efm")
-require("servers/luals")
-require("servers/jdtls")
-require("servers/clangd")
-require("servers/rust_analyzer")
