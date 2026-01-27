@@ -1,7 +1,6 @@
+local group = vim.api.nvim_create_augroup("local_config", {})
 local local_name = ".nvim.local.lua"
 local trust_file = vim.fn.stdpath("data") .. "/trusted"
-
-local M = {}
 
 local f = io.open(trust_file, "a")
 if f then f:close() end
@@ -19,7 +18,7 @@ local function file_hash(filepath)
     return result:match("^%w+")
 end
 
-function M.load()
+local function load()
     local cwd = vim.fn.getcwd()
     local local_file = cwd .. "/" .. local_name
     if not io.open(local_file, "r") then
@@ -38,10 +37,22 @@ function M.load()
     end
 
     trusted[hash] = true
-    local f = io.open(trust_file, "a")
-    f:write(hash .. "\n")
-    f:close()
+    local tf = io.open(trust_file, "a")
+    tf:write(hash .. "\n")
+    tf:close()
     dofile(local_file)
 end
 
-return M
+vim.api.nvim_create_autocmd("DirChanged", {
+    group = group,
+    callback = function()
+        load()
+    end,
+})
+
+vim.api.nvim_create_autocmd("VimEnter", {
+    group = group,
+    callback = function()
+        load()
+    end,
+})

@@ -1,9 +1,5 @@
 local fzf = require("fzf-lua")
 
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
-vim.keymap.set("n", "<leader>fg", fzf.live_grep)
-vim.keymap.set("n", "<leader>ff", fzf.files)
-
 vim.keymap.set("n", "<leader>fn", function()
     local cwd = vim.fn.getcwd() .. "/"
     vim.ui.input({ prompt = "New file: ", default = cwd }, function(path)
@@ -54,5 +50,3 @@ vim.keymap.set("n", "<leader>fd", function()
         }
     })
 end)
-
-vim.keymap.set("n", "gd", vim.lsp.buf.definition)

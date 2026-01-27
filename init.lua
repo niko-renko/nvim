@@ -21,9 +21,13 @@ vim.diagnostic.config({
 
 require("lazy_init")
 
-require("keymap")
-require("autocmds")
-require("commands")
+require("features/lsp")
+require("features/diagnostics")
+require("features/search")
+require("features/file_ops")
+require("features/file_watcher")
+require("features/local_config")
+require("features/jdtls_classfile")
 
 require("servers/efm")
 require("servers/luals")
