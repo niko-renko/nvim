@@ -31,7 +31,6 @@ require("servers/roslyn_ls")
 
 require("features/lsp")
 require("features/diagnostics")
-require("features/search")
 require("features/file_watcher")
 require("features/local_config")
 require("features/jdtls_classfile")
