@@ -3,7 +3,6 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     lazy = false,
     keys = {
-        { "-", "<cmd>Oil<cr>", desc = "Open parent directory" },
         { "<leader>fo", "<cmd>Oil<cr>", desc = "Open Oil file browser" },
     },
     opts = {
