@@ -28,6 +28,8 @@ require("servers/clangd")
 require("servers/rust_analyzer")
 require("servers/roslyn_ls")
 
+require("debuggers/coreclr")
+
 require("features/lsp")
 require("features/diagnostics")
 require("features/file_watcher")
