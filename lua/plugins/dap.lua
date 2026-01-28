@@ -10,6 +10,7 @@ return {
         { "<leader>di", function() require("dap").step_into() end,         desc = "Step into" },
         { "<leader>do", function() require("dap").step_over() end,         desc = "Step over" },
         { "<leader>dO", function() require("dap").step_out() end,          desc = "Step out" },
+        { "<leader>dx", function() require("dap").terminate() end,         desc = "Stop" },
     },
     init = function()
         vim.fn.sign_define("DapBreakpoint", { text = "●", texthl = "DiagnosticError" })

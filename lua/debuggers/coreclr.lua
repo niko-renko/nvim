@@ -61,12 +61,13 @@ local function find_dll()
         return exe_projects[1].dll
     end
 
-    local items = {}
-    for _, proj in ipairs(exe_projects) do
-        table.insert(items, proj.name)
+    local items = { "Select project to debug:" }
+    for i, proj in ipairs(exe_projects) do
+        table.insert(items, string.format("%d. %s", i, proj.name))
     end
 
-    local choice = vim.fn.inputlist(vim.list_extend({ "Select project to debug:" }, items))
+    local choice = vim.fn.inputlist(items)
+
     if choice > 0 and choice <= #exe_projects then
         return exe_projects[choice].dll
     end
