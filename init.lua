@@ -3,6 +3,7 @@ vim.g.mapleader       = " "
 vim.opt.autoread      = true
 vim.opt.termguicolors = true
 vim.opt.relativenumber = true
+vim.opt.signcolumn    = "yes"
 vim.opt.showmode      = false
 vim.opt.cmdheight     = 1
 vim.o.sessionoptions  = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
