@@ -13,6 +13,7 @@ return {
             show_hidden = true,
         },
         keymaps = {
+            ["<C-h>"] = false,
             ["<C-l>"] = false,
         },
     },
