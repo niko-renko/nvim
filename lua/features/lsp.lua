@@ -1,8 +1,5 @@
 local group = vim.api.nvim_create_augroup("lsp", {})
 
--- Keymaps
-vim.keymap.set("n", "gd", vim.lsp.buf.definition)
-
 -- Autocmds
 vim.api.nvim_create_autocmd("BufWritePre", {
     group = group,
