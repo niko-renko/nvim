@@ -28,10 +28,9 @@ return {
             return table.concat(names, ", ")
           end,
         },
-        'encoding',
-        'fileformat',
         'filetype',
       },
+      lualine_y = {},
     }
   }
 }
